@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Wudhu \u2014 Ablution Basics (MP4)",
+    "pdf": "https://YOUR-BUCKET.example.com/pdfs/wudhu.pdf",
+    "video": "https://YOUR-BUCKET.example.com/videos/wudhu.mp4",
+    "tags": [
+      "wudhu",
+      "fiqh",
+      "ablution",
+      "islam"
+    ]
+  },
+  {
+    "title": "Wudhu \u2014 Ablution Basics (HLS)",
+    "pdf": "https://YOUR-BUCKET.example.com/pdfs/wudhu.pdf",
+    "video": "https://YOUR-BUCKET.example.com/videos/wudhu/master.m3u8",
+    "tags": [
+      "wudhu",
+      "hls",
+      "streaming"
+    ]
+  }
+]

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lessons — Large Files (PDF & Video)</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Lessons Library — Large Files</h1>
+      <p class="subtitle">Left: PDF • Right: Video (supports external URLs and HLS streaming for &gt;5GB files)</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="split">
+      <aside class="left">
+        <div class="card">
+          <div class="list-header">
+            <h2>PDF Lessons</h2>
+            <input id="search" type="search" placeholder="Search lessons..." aria-label="Search lessons">
+          </div>
+          <ul id="lessonList" class="lesson-list" aria-live="polite"></ul>
+          <div class="hint muted">
+            Host large PDFs/videos on external storage (S3/R2/B2/Drive/SharePoint) and reference absolute URLs in <code>data/lessons.json</code>.
+          </div>
+        </div>
+        <div class="card viewer">
+          <h3>PDF Viewer</h3>
+          <iframe id="pdfFrame" title="PDF Viewer" loading="lazy" referrerpolicy="no-referrer"></iframe>
+          <div class="muted small">If a PDF won’t preview inline, it will still open in a new tab.</div>
+        </div>
+      </aside>
+      <section class="right">
+        <div class="card viewer">
+          <h3>Video Player</h3>
+          <video id="videoPlayer" controls playsinline preload="metadata" crossorigin="anonymous">
+            <source id="videoSource" src="" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="muted small">
+            For &gt;5GB videos, use HLS (.m3u8) and enable CORS + Range requests on your bucket/CDN.
+          </div>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Lessons Library — Large Files Edition</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
